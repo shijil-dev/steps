@@ -27165,14 +27165,23 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "App", ()=>App);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
 var _indexCss = require("./index.css");
+var _s = $RefreshSig$();
 const messages = [
     "Learn React \u269B\uFE0F",
     "Apply for jobs \uD83D\uDCBC",
     "Invest your new income \uD83E\uDD11"
 ];
 function App() {
-    const step = 2;
+    _s();
+    const [step, setStep] = (0, _react.useState)(1);
+    function handlePrevious() {
+        step > 1 && setStep(step - 1);
+    }
+    function handleNext() {
+        step < 3 && setStep(step + 1);
+    }
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "steps",
         children: [
@@ -27180,33 +27189,33 @@ function App() {
                 className: "numbers",
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: `${step >= 1 ? "active" : ""}`,
+                        className: step >= 1 ? "active" : "",
                         children: "1"
                     }, void 0, false, {
                         fileName: "src/App.js",
-                        lineNumber: 12,
+                        lineNumber: 19,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: `${step >= 2 ? "active" : ""}`,
+                        className: step >= 2 ? "active" : "",
                         children: "2"
                     }, void 0, false, {
                         fileName: "src/App.js",
-                        lineNumber: 13,
+                        lineNumber: 20,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: `${step >= 3 ? "active" : ""}`,
+                        className: step >= 3 ? "active" : "",
                         children: "3"
                     }, void 0, false, {
                         fileName: "src/App.js",
-                        lineNumber: 14,
+                        lineNumber: 21,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "src/App.js",
-                lineNumber: 11,
+                lineNumber: 18,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -27216,12 +27225,12 @@ function App() {
                     "Step ",
                     step,
                     " : ",
-                    messages[step],
+                    messages[step - 1],
                     " "
                 ]
             }, void 0, true, {
                 fileName: "src/App.js",
-                lineNumber: 16,
+                lineNumber: 23,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -27232,10 +27241,11 @@ function App() {
                             backgroundColor: "#7950f2",
                             color: "#fff"
                         },
+                        onClick: ()=>handlePrevious(),
                         children: "Previous"
                     }, void 0, false, {
                         fileName: "src/App.js",
-                        lineNumber: 21,
+                        lineNumber: 28,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -27243,25 +27253,27 @@ function App() {
                             backgroundColor: "#7950f2",
                             color: "#fff"
                         },
+                        onClick: ()=>handleNext(),
                         children: "Next"
                     }, void 0, false, {
                         fileName: "src/App.js",
-                        lineNumber: 24,
+                        lineNumber: 34,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "src/App.js",
-                lineNumber: 20,
+                lineNumber: 27,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "src/App.js",
-        lineNumber: 10,
+        lineNumber: 17,
         columnNumber: 5
     }, this);
 }
+_s(App, "M88kfgrd7Unvr/hfMAIVxST1ckg=");
 _c = App;
 var _c;
 $RefreshReg$(_c, "App");
@@ -27271,7 +27283,7 @@ $RefreshReg$(_c, "App");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./index.css":"irmnC"}],"gkKU3":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./index.css":"irmnC","react":"21dqq"}],"gkKU3":[function(require,module,exports) {
 exports.interopDefault = function(a) {
     return a && a.__esModule ? a : {
         default: a
